@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion AR App</title>
+
+    <!-- A-Frame & AR.js -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Camera Feed -->
+    <video id="video" autoplay></video>
+
+    <!-- AR Scene -->
+    <a-scene embedded arjs>
+        <a-camera position="0 1.6 0"></a-camera>
+        
+        <a-assets>
+            <a-asset-item id="shirt" src="https://drive.google.com/uc?export=download&id=11OYMXG1lHVcM-H99Dl3w0qkQdlLnB3YU"></a-asset-item>
+            <a-asset-item id="hoodie" src="https://drive.google.com/uc?export=download&id=1e379BzIuU5AL7rKUe1li-ZOdAe3RW6kU"></a-asset-item>
+            <a-asset-item id="skirt" src="https://drive.google.com/uc?export=download&id=1aL1v11AiAgUKCavyJuMzUSYJXKFyiXFD"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="clothing" gltf-model="#shirt" position="0 1.5 -2" scale="2 2 2"></a-entity>
+    </a-scene>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+
